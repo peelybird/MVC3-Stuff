@@ -1,0 +1,52 @@
+﻿@using RazorIntro.Models
+@model IEnumerable<Instructor>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Index</title>
+</head>
+<body>
+    <div>
+
+    @ViewBag.Message
+
+    @foreach (var instructor in Model)
+    {
+        <div>
+            <p>Name: @instructor.Name</p>
+            <p>Twitter: @instructor.Tw  itterHandle</p>
+            <p>Description: @Html.Raw(instructor.HtmlDescription)</p>
+        </div>
+    }
+
+    <br />
+    <hr />
+        @@OdeToCode
+        @{
+            var name = "David";
+            name = name.ToLower();
+            
+            if (name.StartsWith("S"))
+            {
+                <text>Your're name starts with S</text>
+            }
+            else
+            {
+                <text>You're name doesn't start with S</text>
+            }
+        }
+       @for (var i = 0; i < 10; i++)
+        {
+            
+            <div>@i</div>   
+        }
+        @name
+    </div>
+</body>
+</html>
