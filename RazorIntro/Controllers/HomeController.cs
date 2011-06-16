@@ -14,7 +14,7 @@ namespace RazorIntro.Controllers
 
         public ActionResult Index()
         {
-            ViewData["Message"] = "Hello, Razor!";
+            ViewData["Message"] = "Hello, Karl!";
             return View(_instructors);
         }
 
